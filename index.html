@@ -1,11 +1,12 @@
-<!doctype html>
-<html>
-<body>
 <script>
-new Image().src =
-  'https://webhook.site/0c2a0964-b6a5-49fd-989f-0c6e3593cd7b?stage=page_loaded';
+fetch('/')
+  .then(r => r.text())
+  .then(d => {
+    new Image().src =
+      'https://webhook.site/0c2a0964-b6a5-49fd-989f-0c6e3593cd7b?stage=fetch_ok';
+  })
+  .catch(e => {
+    new Image().src =
+      'https://webhook.site/0c2a0964-b6a5-49fd-989f-0c6e3593cd7b?stage=fetch_fail';
+  });
 </script>
-</body>
-</html>
-
-
